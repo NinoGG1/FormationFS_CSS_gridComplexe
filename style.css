@@ -1,19 +1,33 @@
 body {
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "g1 g1 g2"
+    "g4 g3 g2"
+    "g4 g5 g5";
 }
-
 div:nth-child(1) {
   background: yellow;
+  grid-area: g1;
 }
 div:nth-child(2) {
   background: purple;
+  grid-area: g2;
 }
 div:nth-child(3) {
   background: green;
+  grid-area: g3;
 }
 div:nth-child(4) {
   background: red;
+  grid-area: g4;
 }
 div:nth-child(5) {
   background: orchid;
+  grid-area: g5;
+}
+div {
+  margin: 10px;
 }
